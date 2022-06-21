@@ -13,8 +13,8 @@ silent: false
 
 ## Workshop Settings
 ocp4_workload_servicemesh_workshop_user_count: "{{ num_users | default(user_count) | default(1) }}"
-ocp4_workload_servicemesh_workshop_image_repo: quay.io/redhatgov/service-mesh-workshop-dashboard
-ocp4_workload_servicemesh_workshop_image_tag: "2.3"
+ocp4_workload_servicemesh_workshop_image_repo: quay.io/bjeon1/workshop-test
+ocp4_workload_servicemesh_workshop_image_tag: "lastest"
 
 ## Operator Settings
 ocp4_workload_servicemesh_workshop_elasticsearch_channel: "4.6"
