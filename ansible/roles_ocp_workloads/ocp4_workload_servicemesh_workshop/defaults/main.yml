@@ -14,7 +14,7 @@ silent: false
 ## Workshop Settings
 ocp4_workload_servicemesh_workshop_user_count: "{{ num_users | default(user_count) | default(1) }}"
 ocp4_workload_servicemesh_workshop_image_repo: quay.io/bjeon1/workshop-test
-ocp4_workload_servicemesh_workshop_image_tag: "lastest"
+ocp4_workload_servicemesh_workshop_image_tag: "latest"
 
 ## Operator Settings
 ocp4_workload_servicemesh_workshop_elasticsearch_channel: "4.6"
