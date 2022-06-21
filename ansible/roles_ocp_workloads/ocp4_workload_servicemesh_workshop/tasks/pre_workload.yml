@@ -1,38 +1,6 @@
 ---
 # Implement your Pre Workload deployment tasks here
 ## FROM agnosticd/ansible/configs/ocp4-workshop/pre_software.yml 
-- name: Setup pre-requisite python3 packages
-  package:
-    state: present
-    name:
-    - git
-    - python3-pip
-
-- name: Setup pre-requisite pip3 packages
-  pip:
-    name:
-    - virtualenv
-    state: present
-    executable: /usr/bin/pip3
-
-- name: Copy requirements.txt to target for k8s virtualenv
-  copy:
-    src: ./files/requirements_k8s.txt
-    dest: /tmp/requirements_k8s.txt
-
-- name: "Create virtualenv k8s"
-  pip:
-    requirements: /tmp/requirements_k8s.txt
-    virtualenv: "/opt/virtualenvs/k8s"
-    virtualenv_site_packages: false
-    virtualenv_command: /usr/local/bin/virtualenv
-
-- name: Ensure system Python3 has selinux library installed
-  pip:
-    state: present
-    executable: /usr/bin/pip3
-    name: selinux
-    version: 0.2.1
       
 ## FROM agnosticd/ansible/configs/ocp4-workshop/software.yml
 
