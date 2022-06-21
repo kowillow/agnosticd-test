@@ -1,6 +1,6 @@
 ---
 # Implement your Pre Workload deployment tasks here
-## agnosticd/ansible/configs/ocp4-workshop/pre_software.yml 에서 가져옴
+## FROM agnosticd/ansible/configs/ocp4-workshop/pre_software.yml 
 - name: Create a Python3 VirtualEnv for use in the k8s Ansible tasks
   hosts: bastions
   gather_facts: false
@@ -50,7 +50,7 @@
   - debug:
       msg: "Pre-Software checks completed successfully"
       
-## agnosticd/ansible/configs/ocp4-workshop/software.yml 에서 가져옴
+## FROM agnosticd/ansible/configs/ocp4-workshop/software.yml
 
 - name: Fetch kube config
   fetch:
